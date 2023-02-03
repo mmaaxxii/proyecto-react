@@ -29,14 +29,42 @@ export function Greeting2() {
     </>
   );
 }
-
 export function Greeting3() {
   function add(x, y) {
     return x + y;
   }
+  return (<h1>La suma es : {add(10, 50)}</h1>);
+}
+export function Greeting50(props) {
   return (
     <>
-      <h1>La suma es : {add(10, 50)}</h1>
+      <h1> Hola {props.name} </h1>
+      <h1> mi edad es {props.edad} </h1>
     </>
   );
 }
+export function Greeting6({ name, edad = 0 }) {
+  return (
+    <>
+      <h1> Hola {name} </h1>
+      <h1> mi edad es {edad} </h1>
+    </>
+  );
+}
+export function Tarjeta(props) {
+  
+  return (
+    <>
+      <h1>
+        Name : {props.name} - {props.married === true ? "Married" : "Single"}
+      </h1>
+      <ul>
+        <h2>Address</h2>
+        <li> Street: {props.address.street}</li>
+        <li> City: </li>
+      </ul>
+      <p>Age : {props.age}</p>
+      <p>Point : {props.points}</p>
+    </>
+  );
+  }
