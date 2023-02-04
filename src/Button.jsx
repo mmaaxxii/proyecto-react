@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types'
 
-export function Button({text}){
-    return <button>
-        {text}
+export function Button({text , name}){
+    return <button onClick={function() {
+        console.log('hola Mundo');
+    }}>
+        {text} - {name}
     </button>
 }
 
@@ -10,6 +12,6 @@ Button.propTypes = {
     text: PropTypes.string.isRequired
 }
 
-//Button.defaultProps = {
-    //text: "Some User"
-//}
+Button.defaultProps = {
+    name: "Some User"
+}
