@@ -33,7 +33,7 @@ export function Greeting3() {
   function add(x, y) {
     return x + y;
   }
-  return (<h1>La suma es : {add(10, 50)}</h1>);
+  return <h1>La suma es : {add(10, 50)}</h1>;
 }
 export function Greeting50(props) {
   return (
@@ -46,13 +46,12 @@ export function Greeting50(props) {
 export function Greeting6({ name, edad = 0 }) {
   return (
     <>
-      <h1> Hola {name} </h1>
+      <h1>Hola {name}</h1>
       <h1> mi edad es {edad} </h1>
     </>
   );
 }
 export function Tarjeta(props) {
-  
   return (
     <>
       <h1>
@@ -67,4 +66,4 @@ export function Tarjeta(props) {
       <p>Point : {props.points}</p>
     </>
   );
-  }
+}
