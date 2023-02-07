@@ -37,25 +37,28 @@ function Counter() {
   const [mensaje, setMensaje] = useState("");
 
   useEffect(() => {
-    console.log("render")
+    console.log("render");
   }, [counter]);
-
-
 
   return (
     <>
-      <input onChange={(e) => setMensaje(e.target.value)}/>
-      <button onClick={ () => {
-        alert("El mensaje es " + mensaje);
-      }}> Save</button>
-      <br/>
+      <input onChange={(e) => setMensaje(e.target.value)} />
+      <button
+        onClick={() => {
+          alert("El mensaje es " + mensaje);
+        }}
+      >
+        {" "}
+        Save
+      </button>
+
+      <br />
       <h1> Counter: {counter} </h1>
       <button
         onClick={() => {
           setCounter(counter + 1);
         }}
       >
-      
         Sumar
       </button>
 
